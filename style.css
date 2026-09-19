@@ -95,3 +95,274 @@ body {
   object-fit: cover;
   border: 3px solid var(--accent-primary);
 }
+.about {
+  padding: 100px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--accent-primary);
+}
+
+.about p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.about h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.about h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-secondary);
+  animation: growLine 1s ease forwards 0.3s;
+}
+
+@keyframes growLine {
+  to {
+    width: 60px;
+  }
+}
+
+.about {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-content {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+.skills {
+  padding: 100px 40px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--bg-color) 0%, #16161f 50%, var(--bg-color) 100%);
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.skills h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--accent-primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background-color: #1a1a24;
+  padding: 30px 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(124, 92, 255, 0.15);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+.skill-card:nth-child(5) { animation-delay: 0.5s; }
+.skill-card:nth-child(6) { animation-delay: 0.6s; }
+.skill-card:nth-child(7) { animation-delay: 0.7s; }
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-primary);
+}
+
+.skill-card h3 {
+  color: var(--accent-secondary);
+  margin-bottom: 10px;
+}
+
+.level {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: rgba(124, 92, 255, 0.15);
+  color: var(--accent-primary);
+}
+.projects {
+  padding: 100px 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.projects h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--accent-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1a1a24;
+  border-radius: 14px;
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.2);
+}
+
+.project-placeholder {
+  background-color: #22222e;
+  border-radius: 10px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  opacity: 0.5;
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 107, 107, 0.15);
+  color: var(--accent-secondary);
+}
+
+.achievements {
+  padding: 100px 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.achievements h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--accent-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.achievements h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-secondary);
+  animation: growLine 1s ease forwards 0.3s;
+}
+
+.achievements-list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.achievement-item {
+  position: relative;
+  background: linear-gradient(145deg, #1a1a24, #20202c);
+  padding: 40px 25px 30px;
+  border-radius: 16px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.achievement-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.achievement-item:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 15px 35px rgba(124, 92, 255, 0.25);
+}
+
+.achievement-item h3 {
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+.achievement-item p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.medal {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  display: inline-block;
+  animation: floatMedal 3s ease-in-out infinite;
+}
+
+@keyframes floatMedal {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
