@@ -20,7 +20,8 @@ body {
   padding: 20px 40px;
   background-color: var(--bg-color);
   position: sticky;
-  top: 0;
+  top: 0; 
+   z-index: 100
 }
 
 .nav-links {
@@ -361,8 +362,120 @@ body {
   display: inline-block;
   animation: floatMedal 3s ease-in-out infinite;
 }
-
 @keyframes floatMedal {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
+}
+.art {
+  padding: 100px 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.art h2 {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  color: var(--accent-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.art h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: var(--accent-secondary);
+  animation: growLine 1s ease forwards 0.3s;
+}
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  height: 450px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+.slides {
+  position: relative;
+  height: 450px;
+  background-color: #1a1a24;
+}
+.contact {
+  padding: 100px 40px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--accent-primary);
+}
+
+.contact p {
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent-primary);
+  color: var(--bg-color);
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(124, 92, 255, 0.35);
+}
+.github-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 1px solid var(--accent-primary);
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: var(--accent-primary);
+  color: var(--bg-color);
+}
+.contact-email {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--accent-primary);
+  letter-spacing: 0.3px;
+  opacity: 0.9;
 }
